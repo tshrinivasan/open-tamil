@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # run unit tests when previous bits passed
-cd test/
+cd tests/
 
 
 if [ -e success.txt ];
@@ -30,7 +30,7 @@ do
 done
 
 NFAIL=0 #ideally no unittests should fail
-TOTFAIL=`wc -l failed.txt | cut -d' ' -f1`
+TOTFAIL=`wc -l failed.txt | cut -d'f' -f1`
 echo "from sys import exit; exit( $TOTFAIL !=  $NFAIL )" | python
 if [ $?  -eq 0 ]
 then
@@ -45,5 +45,6 @@ fi
 # cleanup
 rm failed.txt
 rm success.txt
+rm -fr ./tmp*
 cd ../
 exit $exitcode

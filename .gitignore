@@ -4,7 +4,11 @@ tamilphonetic
 TODO
 misc/
 *.py[cod]
-
+*.dat
+*.ods
+MANIFEST
+*~
+*.*~
 # C extensions
 *.so
 
@@ -39,3 +43,4 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+/java/OpenTamil/nbproject/private/

@@ -1,5 +1,4 @@
-# (C) 2013 Muthiah Annamalai
-
+# (C) 2013-2015 Muthiah Annamalai
 from . import jaffna
 from . import azhagi
 from . import combinational
