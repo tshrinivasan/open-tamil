@@ -326,6 +326,18 @@ def compare_words_lexicographic( word_a, word_b ):
         # else result depends on if La is shorter than Lb
         return cmp(La,Lb)
 
+def split_letter(letter):
+	""" split the given letter into uyir and mei letter """
+
+	if letter not in uyirmei_letters:
+		return letter
+	elif letter in uyirmei_letters:
+		uyirmei_index = uyirmei_letters.index(letter)
+		mei_index = uyirmei_index/12
+		uyir_index = uyirmei_index%12
+		mei_uyir = [mei_letters[mei_index],uyir_letters[uyir_index]]
+		return mei_uyir
+
 # அ ஆ இ ஈ உ ஊ எ ஏ ஐ ஒ ஓ ஔ ஃ 
 # க் ச் ட் த் ப் ற் ஞ் ங் ண் ந் ம் ன் ய் ர் ல் வ் ழ் ள் ஜ் ஷ் ஸ் ஹ் 
 # க ச ட த ப ற ஞ ங ண ந ம ன ய ர ல வ ழ ள ஜ ஷ ஸ ஹ 
